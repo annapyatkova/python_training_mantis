@@ -1,5 +1,6 @@
 class Project:
-    def __init__(self, name=None, status=None, inherit_global=None, view_state=None, description=None):
+    def __init__(self, id = None, name=None, status=None, inherit_global=None, view_state=None, description=None):
+        self.id = id
         self.name = name
         self.status = status
         self.inherit_global = inherit_global
