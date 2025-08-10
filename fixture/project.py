@@ -29,8 +29,6 @@ class ProjectHelper:
         wd = self.app.wd
         self.change_field_value("name", project.name)
         self.change_field_value_status("status", project.status)
-        # inherit_global
-        # view_state
         self.change_field_value("description", project.description)
 
     def change_field_value(self, field_name, text):
@@ -45,7 +43,6 @@ class ProjectHelper:
         if text is not None:
             wd.find_element_by_name(field_name).click()
             Select(wd.find_element_by_name(field_name)).select_by_visible_text(text)
-            # wd.find_element_by_xpath("//select[@name='status']/option[@value='" + project.status + "']").click()
 
     def delete_project_by_id(self, id):
         wd = self.app.wd
