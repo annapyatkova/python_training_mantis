@@ -11,7 +11,7 @@ class ProjectHelper:
         wd.find_element_by_xpath("//input[@value='Create New Project']").click()
         self.fill_project_form(project)
         wd.find_element_by_xpath("//input[@value='Add Project']").click()
-        self.return_to_project_page()
+        self.return_to_projects_page()
 
     def open_projects_page(self):
         wd = self.app.wd
