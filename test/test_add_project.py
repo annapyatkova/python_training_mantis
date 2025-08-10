@@ -1,9 +1,9 @@
 from model.project import Project
 
 
-def test_add_project(app, db):
+def test_add_project(app, db, json_projects):
     app.session.ensure_login(username="administrator", password="root")
-    project = Project(name="testProj1",status="stable", description="testDescription")
+    project = json_projects
     old_projects = db.get_project_list()
     app.project.create(project)
     new_projects = db.get_project_list()
